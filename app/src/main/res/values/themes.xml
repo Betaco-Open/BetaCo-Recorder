@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FM1" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+    <style name="BottomNavigationViewTextStyle"
+        >
+        <item name="fontFamily">@font/nothingfont</item>
+<!--        <item name="android:textSize">12sp</item>-->
+        <item name="itemTextColor" android:color="@color/red" />
+
+    </style>
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/secondary_text_dark</item>
+    </style>
+    <style name="BottomNavigationViewBackgroundActive">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Theme.FM1" parent="Base.Theme.FM1" />
+</resources>
