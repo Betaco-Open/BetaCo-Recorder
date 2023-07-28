@@ -1,4 +1,4 @@
-package com.service.rare.fm1
+package com.service.rare.recorder
 
 import org.junit.Test
 

@@ -1,8 +1,10 @@
-package com.service.rare.fm1;
+package com.service.rare.recorder;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.service.rare.recorder.R;
 
 public class MainActivity2 extends AppCompatActivity {
 

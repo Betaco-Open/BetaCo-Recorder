@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.service.rare.fm1'
+    namespace 'com.service.rare.recorder'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.service.rare.fm1"
+        applicationId "com.service.rare.recorder"
         minSdk 24
         targetSdk 33
         versionCode 1

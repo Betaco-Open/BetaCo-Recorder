@@ -13,15 +13,15 @@
         android:theme="@style/Theme.FM1"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity2"
+            android:name="com.service.rare.recorder.MainActivity2"
             android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".Main"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/title_activity_main"-->
+<!--            android:theme="@style/Theme.FM1" />-->
         <activity
-            android:name=".Main"
-            android:exported="false"
-            android:label="@string/title_activity_main"
-            android:theme="@style/Theme.FM1" />
-        <activity
-            android:name=".MainActivity"
+            android:name="com.service.rare.recorder.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
