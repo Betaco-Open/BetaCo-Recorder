@@ -1,9 +1,10 @@
-package com.service.rare.fm1
+package com.service.rare.recorder
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatActivity
+import com.service.rare.recorder.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
