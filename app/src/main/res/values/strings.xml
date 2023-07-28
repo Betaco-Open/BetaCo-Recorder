@@ -6,7 +6,13 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
+    <string name="edit">Edit</string>
+    <string name="favourite">Favourite</string>
+    <string name="more">More</string>
+    <string name="content_description_search">Edit</string>
+    <string name="content_description_favorite">Favorite</string>
+    <string name="content_description_more">More</string>
+    <string name="page_title">Title Large</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
