@@ -5,14 +5,15 @@
     <item
         android:id="@+id/edit"
         android:contentDescription="@string/content_description_search"
-        android:title="@string/edit"
+        android:title="@string/op1"
+        android:onClick="showSearchDialog"
         app:showAsAction="ifRoom" />
 
 
-    <item
-        android:id="@+id/more"
-        android:contentDescription="@string/content_description_more"
-        android:title="@string/more"
-        app:showAsAction="ifRoom" />
+<!--    <item-->
+<!--        android:id="@+id/more"-->
+<!--        android:contentDescription="@string/content_description_more"-->
+<!--        android:title="@string/op2"-->
+<!--        app:showAsAction="ifRoom" />-->
 
 </menu>

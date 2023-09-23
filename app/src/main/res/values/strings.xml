@@ -6,13 +6,13 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="edit">Edit</string>
+    <string name="op1">Search</string>
     <string name="favourite">Favourite</string>
-    <string name="more">More</string>
+    <string name="op2">More</string>
     <string name="content_description_search">Edit</string>
     <string name="content_description_favorite">Favorite</string>
     <string name="content_description_more">More</string>
-    <string name="page_title">Title Large</string>
+    <string name="page_title">My Recordings</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
@@ -49,4 +49,7 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="fab_content_desc">Create New Recording</string>
+    <string name="extended_fab_label">New Recording</string>
+    <string name="extended_fab_content_desc">Nothing</string>
 </resources>

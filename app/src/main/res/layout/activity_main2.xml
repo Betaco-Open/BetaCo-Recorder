@@ -7,13 +7,22 @@
     tools:context="com.service.rare.recorder.MainActivity2">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="72.dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fitsSystemWindows="true">
+            android:layout_height="147dp"
+            android:fitsSystemWindows="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
 
@@ -28,13 +37,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:elevation="0dp"
-                    android:theme="@style/BottomNavigationViewTextStyle"
+                    android:theme="@style/Theme.MaterialComponents.CompactMenu"
                     app:menu="@menu/top_app_bar"
+                    app:navigationIconTint="@color/black"
+                    app:title="@string/page_title">
 
-                    app:navigationIconTint="@color/material_dynamic_neutral60"
-
-                    app:title="@string/page_title"
-                    app:titleTextAppearance="@style/BottomNavigationViewTextStyle">
+                    <!--                    app:titleTextAppearance="@style/BottomNavigationViewTextStyle">-->
 
                 </com.google.android.material.appbar.MaterialToolbar>
 
@@ -42,20 +50,60 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <!-- Note: A RecyclerView can also be used -->
-        <androidx.core.widget.NestedScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:backgroundTint="#E2B5EC"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/text_row_item" />
+        <!-- Note: A RecyclerView can also be used -->
+        <!--        <androidx.core.widget.NestedScrollView-->
+        <!--            android:id="@+id/nestedScrollView"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
 
-            <!-- Scrollable content -->
+        <!--            app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+        <!--            &lt;!&ndash; Linear progress indicator &ndash;&gt;-->
+        <!--            <com.google.android.material.progressindicator.LinearProgressIndicator-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:indeterminate="true" />-->
 
-        </androidx.core.widget.NestedScrollView>
+        <!--            &lt;!&ndash; Scrollable content &ndash;&gt;-->
+
+        <!--           -->
+        <!--        </androidx.core.widget.NestedScrollView>-->
+
+        <!--        app:itemTextColor="@color/bottom_color_state_list"-->
+        <!--        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"-->
+        <!--        app:itemIconTint="@color/bottom_color_state_list"-->
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    <!--        app:itemTextColor="@color/bottom_color_state_list"-->
-    <!--        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"-->
-    <!--        app:itemIconTint="@color/bottom_color_state_list"-->
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coordinatorLayout">
+
+
+    </FrameLayout>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extended_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/extended_fab_content_desc"
+        android:fontFamily="sans-serif"
+        android:text="@string/extended_fab_label"
+        app:icon="@drawable/baseline_album_24"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -77,5 +125,4 @@
     <!--        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"-->
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:srcCompat="@mipmap/gradient" />-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>

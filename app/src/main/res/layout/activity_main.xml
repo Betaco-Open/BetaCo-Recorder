@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.service.rare.recorder.MainActivity"
-    android:background="@color/black"
     >
 
     <TextView
@@ -14,8 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/border"
         android:fontFamily="@font/nothingfont"
-        android:text="Fm(1)"
-        android:textColor="@color/white"
+        android:text="rec ."
         android:textSize="60sp"
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,7 +26,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tag Line"
+        android:text="thoughts, ideas, and experiences"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />

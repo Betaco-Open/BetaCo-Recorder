@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Base.Theme.Recorder" parent="Theme.Material3.DynamicColors.DayNight">
+    <style name="Base.Theme.Recorder" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
 
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
@@ -14,12 +14,21 @@
 
     </style>
 
-    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+<!--    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">-->
 
+<!--    </style>-->
+
+<!--    <style name="BottomNavigationViewBackgroundActive">-->
+
+<!--    </style>-->
+    <style name="ItemIcon" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/nothingfont</item>
     </style>
-
-    <style name="BottomNavigationViewBackgroundActive">
-
+    <style name="TitleFont" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="color">@color/gray</item>
+    </style>
+    <style name="ClockStyle" parent="TextAppearance.Material3.HeadlineLarge">
+                <item name="fontFamily">@font/nunito</item>
     </style>
 
 
