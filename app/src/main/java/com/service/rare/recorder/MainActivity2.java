@@ -1,7 +1,6 @@
 package com.service.rare.recorder;
 
 import static com.service.rare.recorder.CustomAdapter.LastAdapterPos;
-
 import static java.lang.Integer.valueOf;
 
 import android.content.Intent;
@@ -22,7 +21,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 
 import java.io.File;
 import java.io.IOException;
@@ -193,7 +191,8 @@ public class MainActivity2 extends AppCompatActivity {
         Toast.makeText(this, "Resumed", Toast.LENGTH_SHORT).show();
         super.onResume();
     }
-    public static boolean playRecording(String filePath, View v, int adapterPosition, ImageView prev_image) throws IOException {
+
+    public static boolean playRecording(String filePath, View v, int adapterPosition, ImageView prev_image, ImageView play_image) throws IOException {
         //----- ToDo: Convert to a switch/case scenario or faster processing----
         // Create MediaPlayer Instance
         if (!hasMPInstance) {
@@ -209,8 +208,14 @@ public class MainActivity2 extends AppCompatActivity {
             );
             mediaPlayer.setDataSource(v.getContext(), myUri);
             mediaPlayer.prepare();
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    play_image.setImageResource(R.drawable.baseline_play_arrow_24);
+                }
+            });
             mediaPlayer.start();
-            hasMPInstance=true;
+
+            hasMPInstance = true;
             return true;
         } else {
             if(mediaPlayer.isPlaying()) {
@@ -241,8 +246,14 @@ public class MainActivity2 extends AppCompatActivity {
                     );
                     mediaPlayer.setDataSource(v.getContext(), myUri);
                     mediaPlayer.prepare();
+                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        public void onCompletion(MediaPlayer mp) {
+                            play_image.setImageResource(R.drawable.baseline_play_arrow_24);
+                        }
+                    });
                     mediaPlayer.start();
-                    hasMPInstance=true;
+
+                    hasMPInstance = true;
                     return true;
                 }
             }else {
@@ -254,23 +265,30 @@ public class MainActivity2 extends AppCompatActivity {
                 else{
                 if(prev_image!=null){
                     prev_image.setImageResource(R.drawable.baseline_play_arrow_24);
-                    Toast.makeText(v.getContext(), "NotNull ",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(v.getContext(), "NotNull ",Toast.LENGTH_SHORT).show();
                 }
                 mediaPlayer.release();
 //                Toast.makeText(v.getContext(), "Situation 3 - "+ LastAdapterPos+"/"+adapterPosition,Toast.LENGTH_SHORT).show();
-                mediaPlayer = new MediaPlayer();
-                Uri myUri = Uri.parse(filePath); // initialize Uri here
-                mediaPlayer.setAudioAttributes(
-                        new AudioAttributes.Builder()
-                                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                                .setUsage(AudioAttributes.USAGE_MEDIA)
-                                .build()
-                );
-                mediaPlayer.setDataSource(v.getContext(), myUri);
-                mediaPlayer.prepare();
-                mediaPlayer.start();
-                hasMPInstance=true;
-                return true;}
+                    mediaPlayer = new MediaPlayer();
+                    Uri myUri = Uri.parse(filePath); // initialize Uri here
+                    mediaPlayer.setAudioAttributes(
+                            new AudioAttributes.Builder()
+                                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                                    .build()
+                    );
+                    mediaPlayer.setDataSource(v.getContext(), myUri);
+                    mediaPlayer.prepare();
+                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        public void onCompletion(MediaPlayer mp) {
+                            play_image.setImageResource(R.drawable.baseline_play_arrow_24);
+                        }
+                    });
+                    mediaPlayer.start();
+
+                    hasMPInstance = true;
+                    return true;
+                }
 
             }
 
