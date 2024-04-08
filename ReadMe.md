@@ -1,8 +1,11 @@
 
 # BetaCo Recorder
 
-Audio Recorder app for Android. Built with Compose Material You.
-  
+Audio Recorder app for Android. Built with Compose Material You with design inspired by Nothing Design System.
+
+## Screenshots
+![Screenshot_20240408_145512](https://github.com/Betaco-Open/BetaCo-Recorder/assets/64083352/24a97edb-853d-49d9-85fc-96f39544d93b)
+
 
 ## Roadmap
 
